@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hello World</title>
+  <link href='./style.css' rel='stylesheet'>
+  <style>
+    *{
+  font-family: 'Times New Roman', Times, serif;
+    }
+    .tengah{
+    display:flex;
+    justify-content:center;
+    }
+    .card{
+    width: 40%;
+    box-shadow :0px 4px 8px 8px 0px ;
+    .cardbody{
+    padding: 2px 16px;
+    }
+    .cardfooter{
+    padding: 8px;
+    background-color: brown;
+    display:flex;
+    justify-content: right;
+    }
+    card (h2){
+      padding:0px 16px;
+      }
+    
+    #hasil{
+    width: 100%;
+    height: 200px;
+    background-color: beig#C0C0C0;
+    margin: 10px 0px;
+    Padding: 5px;
+    }
+    label{
+    font-size: 14px;
+    font-weight: bold;
+    }
+    input [type="text"]{
+    width: 97%;
+    padding: 10px;
+    margin: 8px 0px;
+    }
+    button{
+    border:none;
+     border-radius: 8px;
+    font-size: 16px;
+    }
+  </style>
+</head>
+</body>
+  <div class="tengah">
+  <div class=""card">
+<h2>Hitung luas persegi</h2>
+<div class="carbdbody">
+  <form>
+<label>Nilai panjang</label>
+<input type="text" id="nPJ">
+
+<label>Nilai Lebar</label>
+<input type="text" id="nLB">
+</form>
+<div id="hasil">Hasil hitung luas persegi</div>
+</div>
+<div class="cardfooter"></div>
+<button type="button" onclick="HitungLuas()" class="HitungLuas">hitung luas</button>
+</div>
+</div>
+</div>
+  <script>
+    function HitungLuas (){
+      let pj =document.getElementById("nPJ").value
+      let lb = document.getElementById("nLB").value
+
+      let LU= pj*lb
+      let PJLB= parseFloat (pj)+Number (lb)
+     let KLL= 2*PJLB
+
+    let hsl="hitung luas persegi dengan Nilai<br>"
+       hsl+="panjang="+ pj +"cm; <br>lebar="+ lb + "cm;<br>"
+       hsl+="luas= panjang x lebar<br>"
+      hsl+="luas="+ pj +" x "+ lb
+      hsl+="luas="+LU+"cm<sup>2</sup><br>"
+      hsl+="Hitung keliling persegi<br>"
+      hsl+="keliling=2 X (panjang + lebar)<br>"
+      hsl+="keliling = 2 X ("+pj+ "+"+lb+")<br>"
+      hsl+="keliling = 2 X "+PJLB+"<br>"
+      hsl+="keliling ="+ KLL +"cm<br>"
+document.getElementById("hasil").innerHTML= hsl
+    }
+
+  </script>
+</body>
+</html>
